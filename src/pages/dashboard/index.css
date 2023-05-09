@@ -1,0 +1,75 @@
+.dashboard {
+    display: flex;
+    position: relative;
+}
+
+.dashboard-sidebar {
+    background-color: #E1F0FB;
+    position: absolute;
+}
+
+.dashboard-sidebar .ttl {
+    background-image: url('../../img/ttl-dashbord-sidebar.png');
+}
+
+.dashboard-sidebar .item {
+    width: 193px;
+    height: 63px;
+    border-radius: 50px;
+    background-color: #172B4D;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.dashboard-sidebar .item:hover {
+    cursor: pointer;
+    background: #172B4Dbb;
+}
+
+.dashboard-sidebar .item:last-child:hover {
+    cursor: pointer;
+    background: #ddd;
+}
+
+.dashboard-sidebar .item.active {
+    background-color: #2C92D2;
+    margin-left: auto;
+}
+
+.dashboard-sidebar .item.active::before {
+    content: '';
+    width: 8px;
+    background-image: url('../../img/arrow-right-02.png');
+    height: 14px;
+    position: absolute;
+    left: -20px;
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-sidebar .item:last-child {
+    margin-top: 70px;
+    background-color: white;
+    color: #555;
+}
+
+.dashboard .board {
+    padding:75px 75px 75px 490px;
+    width: 100%;
+}
+
+.dashboard .board h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.dashboard .board h3 {
+    font-size: 28px;
+    font-weight: bold;
+}

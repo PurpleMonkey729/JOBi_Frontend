@@ -1,0 +1,401 @@
+.business {
+    display: flex;
+    position: relative;
+}
+
+.business-sidebar {
+    background-color: white;
+    position: absolute;
+    z-index: 999;
+    height: 100%;
+}
+
+.business-sidebar .ttl {
+    background-image: url('../../img/ttl-dashbord-sidebar.png');
+}
+
+.business-sidebar .item {
+    width: 252px;
+    height: 55px;
+    color: #172B4D;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.business-sidebar .item img {
+    position: absolute;
+    left: 20px;
+}
+
+.business-sidebar .item:hover {
+    cursor: pointer;
+    color: white;
+    background: #172B4Dbb;
+}
+
+.business-sidebar .item.active {
+    background-color: #F6F9FC;
+    color: #7764E4;
+}
+
+.business .board {
+    padding-left:342px;
+    padding-bottom: 250px;
+    width: 100%;
+    position: relative;
+    background-color: #F1F3F9;
+    z-index: 1;
+}
+
+.business .board:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    width: 100%;
+    height: 491px;
+    background-color: #2C92D2;
+}
+
+.business .header {
+    padding-top: 75px;
+    width: 802px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.business .header h2 {
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+}
+
+.business .header p {
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+}
+
+.business .btn-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.business .btn-box .btn {
+    width: 150px;
+    height: 40px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border: 1px solid #7764E4;
+    color: #7764E4;
+    font-size: 13px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.business .btn-box .btn:hover {
+    background-color: #7764E4;
+    color: white;
+    cursor: pointer;
+}
+
+.business .cont {
+    width: 802px;
+    background-color: white;
+    box-shadow: 0 5px 5px #ccc;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.bhn img.cal {
+    position: absolute;
+    top: 40px;
+    left: 25px;
+    z-index: 999;
+}
+
+.bhn .react-datepicker {
+    border: none;
+    box-shadow: 0 2px 6px #ddd;
+}
+
+.bhn .react-datepicker-wrapper input {
+    padding-left: 55px;
+    width: 269px;
+    color: #8898AA;
+}
+
+.bhn .react-datepicker__triangle {
+    display: none;
+}
+
+.bhn .react-datepicker-popper {
+    padding-top: 0 !important;
+}
+
+.bhn .react-datepicker__day-name, .bhn .react-datepicker__day, .bhn .react-datepicker__time-name {
+    width: 36px !important;
+    height: 36px !important;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    font-size: 15px;
+    color: #172B4D;
+}
+
+.bhn .react-datepicker__day-name {
+    width: 45px !important;
+    height: 45px !important;
+    margin: 0;
+}
+
+.bhn .react-datepicker__day-name {
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.bhn .react-datepicker__day--selected{
+    background-color: #7764E433;
+    border-radius: 50px;
+    margin: 9px;
+    color: #7764E4;
+    font-weight: bold;
+}
+
+.bhn .react-datepicker__header {
+    background-color: white;
+    padding-top: 50px;
+    border-bottom: none;
+}
+
+.bhn .react-datepicker__current-month {
+    color: #172B4D;
+    padding-bottom: 25px;
+}
+
+.bhn .react-datepicker__navigation {
+    top: 50px;
+}
+
+.bhn .react-datepicker__navigation-icon::before {
+    border-color: #8898AA;
+}
+
+.bhn input[type=time] {
+    width: 269px;
+}
+
+input[type=time] {
+    border: none;
+    color: #2a2c2d;
+    font-size: 14px;
+    font-family: helvetica;
+    width: 180px;
+  }
+  
+  /* Wrapper around the hour, minute, second, and am/pm fields as well as 
+  the up and down buttons and the 'X' button */
+  input[type=time]::-webkit-datetime-edit-fields-wrapper {
+    display: flex;
+  }
+  
+  /* The space between the fields - between hour and minute, the minute and 
+  second, second and am/pm */
+  input[type=time]::-webkit-datetime-edit-text {
+    padding: 19px 4px;
+  }
+  
+  /* The naming convention for the hour, minute, second, and am/pm field is
+  `-webkit-datetime-edit-{field}-field` */
+  
+  /* Hour */
+  input[type=time]::-webkit-datetime-edit-hour-field {
+    background-color: #f2f4f5;
+    border-radius: 15%;
+    padding: 19px 13px;
+  }
+  
+  /* Minute */
+  input[type=time]::-webkit-datetime-edit-minute-field {
+    background-color: #f2f4f5;
+    border-radius: 15%;
+    padding: 19px 13px;
+  }
+  
+  /* AM/PM */
+  input[type=time]::-webkit-datetime-edit-ampm-field {
+    background-color: #7155d3;
+    border-radius: 15%;
+    color: #fff;
+    padding: 19px 13px;
+  }
+  
+  /* 'X' button for resetting/clearing time */
+  input[type=time]::-webkit-clear-button {
+    display: none;
+  }
+  
+  /* Up/Down arrows for incrementing/decrementing the value */
+  input[type=time]::-webkit-inner-spin-button {
+    display: none;
+  }
+
+.bhn input, .bhn textarea{
+    background-color: #f7fafc;
+    border-radius: 5px;
+    box-shadow: 3px 5px 5px #ddd;
+}
+
+.bhn input {
+    height: 50px;
+    padding: 0 27px;
+}
+
+.bhn textarea {
+    width: 100%;
+    padding: 22px 30px;
+}
+
+.bhn .mycheckbox {
+    width: 150px;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.bhn .alert {
+    position: relative;
+}
+
+.bhn .alert input {
+    border: 1px solid red;
+    color: red;
+}
+
+.bhn .alert-txt {
+    font-size: 11px;
+    color: red;
+    margin-top: 10px;
+    position: absolute;
+}
+
+.businesshiringconform input, .businesshiringconform textarea {
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+}
+
+.businesshiringconform textarea {
+    padding: 15px 30px;
+}
+
+.businesshiringconform .mycheckbox .checkmark {
+    border-color: transparent;
+}
+
+.businesshiringconform .mycheckbox .checkmark::after {
+    display: block;
+}
+
+.bhome .rbc-toolbar {
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bhome .rbc-calendar {
+    height: 732px;
+}
+
+.bhome .rbc-btn-group {
+    display: flex;
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+}
+
+.bhome .rbc-btn-group button {
+    font-size: 12px;
+    height: 35px;
+}
+
+.bhome .rbc-btn-group button:first-child {
+    color: #7764E4;
+}
+
+.bhome .rbc-month-view {
+    width: 777px;
+    margin: 0 auto 40px;
+    border: none;
+}
+
+
+.bhome .rbc-month-header .rbc-header {
+    width: 111px;
+    height: 37px;
+    background-color: #F7FAFC;
+    color: #A3A6B4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7px;
+    font-weight: bold;
+    border: none;
+}
+
+.bhome .rbc-day-bg {
+    border: 1px solid #f7fafc;
+    border-right: 1px solid #f7fafc !important;
+    border-bottom: 1px solid #f7fafc !important;
+    border-left: none !important;
+    border-top: none !important;
+    padding: 5px;
+    width: 111px;
+    height: 111px;
+}
+
+.bhome .rbc-day-bg:first-child {
+    border-left: 1px solid #f7fafc !important;
+}
+
+.bhome .rbc-off-range-bg {
+    background-color: white;
+}
+
+.bhome .rbc-date-cell {
+    padding: 10px 5px 0 0;
+    color: #8898AA;
+    font-size: 9px;
+}
+
+.bhome .rbc-date-cell.rbc-off-range {
+    color: #8898AA88;
+}
+
+.bhome .rbc-month-row {
+    border: none !important;
+}
+
+.bhome .rbc-event {
+    height: 24px;
+    padding: 5px 10px;
+}
+
+.bhome .rbc-event-content {
+    font-size: 8px;
+}

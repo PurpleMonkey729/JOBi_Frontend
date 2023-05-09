@@ -1,0 +1,68 @@
+.regist {
+  width: 1280px;
+  margin: 0 auto;
+  background-color: #E1F0FB;
+}
+
+.regist-header .ttl {
+    background-image: url('../../img/ttl-regist.png');
+}
+
+.regist-header nav .item {
+    font-size: 23px;
+    font-weight: bold;
+    color: #959595;
+}
+
+.regist-header nav .item.active {
+    color: #2c92d2;
+}
+
+.regist-cont {
+    max-width: 752px;
+    padding: 50px 0 50px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.regist-cont h2 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 23px;
+}
+
+.regist-cont .row {
+    display: flex;
+    height: 45px;
+    margin-top: 25px;
+}
+
+.regist-cont .row .left {
+    width: 242px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.regist-cont .row .right {
+    width: 500px;
+    height: 100%;
+    margin-left: 10px;
+}
+
+.regist-cont .row .right input {
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.login {
+    background-image: url('../../img/bg-login.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login .ttl {
+    background-image: url('../../img/ttl-login.png');
+}
