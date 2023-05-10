@@ -52,7 +52,7 @@ export default function LoginPage() {
                 </p>
                 <div className="btn-gradient w-[367px] h-[71px] mt-[43px] mx-auto text-[18px]" onClick={login}>ログイン</div>
             </div>
-            <p className='mt-[25px] text-white text-center'>新規登録はこちら</p>
+            <p className='mt-[25px] text-white text-center'>新規登録は<a href='/register' style={{textDecoration: "underline"}}>こちら</a></p>
         </div>
     );
 }
