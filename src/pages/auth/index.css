@@ -1,7 +1,9 @@
 .regist {
-  width: 1280px;
-  margin: 0 auto;
-  background-color: #E1F0FB;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: #E1F0FB;
+    min-height: 100vh;
 }
 
 .regist-header .ttl {
@@ -33,7 +35,7 @@
 
 .regist-cont .row {
     display: flex;
-    height: 45px;
+    align-items: center;
     margin-top: 25px;
 }
 
@@ -42,19 +44,54 @@
     height: 100%;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
 }
 
 .regist-cont .row .right {
     width: 500px;
-    height: 100%;
     margin-left: 10px;
 }
 
 .regist-cont .row .right input {
-    height: 100%;
+    height: 45px;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.regist-cont .row .right select {
+    width: 299px;
+    height: 45px;
+    padding-left: 20px;
+}
+
+.regist input[type=text],
+.regist select,
+.regist textarea {
+    box-shadow: inset 1px 1px 5px #ddd;
+}
+
+.regist .select {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: min-content;
+}
+
+.regist .select::before {
+    position: absolute;
+    content: '';
+    right: 1px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+}
+
+.regist .select::after {
+    position: absolute;
+    content: '';
+    right: 10px;
+    width: 15px;
+    height: 10px;
+    background-image: url('../../img/arrow-dropdown.png');
 }
 
 .login {
@@ -65,4 +102,50 @@
 
 .login .ttl {
     background-image: url('../../img/ttl-login.png');
+}
+
+@media (max-width: 1024px) {
+    .regist-header nav .item {
+        font-size: 12px;
+    }
+
+    .regist-cont {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .regist-cont h2 {
+        font-size: 20px;
+    }
+
+    .regist-cont .row {
+        display: block;
+        height: auto;
+    }
+
+    .regist-cont .row .left {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .regist-cont .row .right {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .regist-cont .row .right input {
+        width: 100%;
+    }
+
+    .regist-cont .row .right select {
+        width: 100%;
+    }
+
+    .regist-cont .mycheckbox {
+        font-size: 13px;
+    }
+
+    .regist .select {
+        width: 100%;
+    }
 }

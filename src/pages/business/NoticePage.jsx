@@ -6,7 +6,7 @@ export default function BusinessNoticePage() {
             <Sidebar active_num={1} />
             <div className="board">
                 <div className="header">
-                    <div className="absolute right-[70px] top-[80px]">
+                    <div className="alarm-box absolute right-[70px] top-[80px]">
                         <div className="relative flex">
                             <div className="absolute w-[20px] h-[20px] top-[-10px] left-[-10px] rounded-full bg-[#FA8673] text-white font-bold text-[12px] flex justify-center items-center">1</div>
                             <img src='src/img/icon-bell.png' alt="icon-bell" className='mr-[10px] w-[20px] h-[22px]' />
@@ -17,9 +17,9 @@ export default function BusinessNoticePage() {
                     <h2>お知らせ</h2>
                     <p className='mt-[15px]'>こちらは運営からのお知らせ一覧です。</p>
                 </div>
-                <div className="cont mt-[20px] h-[1024px] py-[40px] px-[50px]">
+                <div className="cont mt-[20px] py-[40px] px-[50px]">
                     <div className="notice mb-[50px]">
-                        <h3 className='border-b-[2px] border-[#707070] pb-[10px] text-[15px] font-bold'>2023.04.25　　【ニュース】旧バージョンのサポート終了に関するお知らせ</h3>
+                        <h3 className='border-b-[2px] border-[#707070] pb-[10px] text-[15px] font-bold'>2023.04.25　　<br className='hidden sp:block'/>【ニュース】旧バージョンのサポート終了に関するお知らせ</h3>
                         <p className=' mt-[23px] leading-[1.6]'>
                             ▼対象バージョン
                             <br /><br />
@@ -42,7 +42,7 @@ export default function BusinessNoticePage() {
                             引き続きご愛顧くださいますようお願い申し上げます。</p>
                     </div>
                     <div className="notice">
-                        <h3 className='border-b-[2px] border-[#707070] pb-[10px] text-[15px] font-bold'>2023.04.25　　【お知らせ】修正依頼を受け付けました。</h3>
+                        <h3 className='border-b-[2px] border-[#707070] pb-[10px] text-[15px] font-bold'>2023.04.25　　<br className='hidden sp:block'/>【お知らせ】修正依頼を受け付けました。</h3>
                         <p className=' mt-[23px] leading-[1.6]'>
                             修正依頼を受け付けました。<br/>
                             反映まで１〜２日ほどお待ちください。

@@ -7,6 +7,8 @@ import {
   StaffRegistPage,
   ShopRegistPage1,
   ShopRegistPage2,
+  ServiceTermPage,
+  PrivacyPolicyPage,
   LoginPage,
   ShopListPage,
   HomePage,
@@ -35,6 +37,8 @@ export default function App() {
       <Route path='/staffregist' element={<StaffRegistPage />} />
       <Route path='/shopregist1' element={<ShopRegistPage1 />} />
       <Route path='/shopregist2' element={<ShopRegistPage2 />} />
+      <Route path='/serviceterm' element={<ServiceTermPage />} />
+      <Route path='/privacypolicy' element={<PrivacyPolicyPage />} />
       <Route path='/login' element={<LoginPage />} />
       <Route path='/shoplist' element={<ShopListPage />} />
       <Route path='/home' element={<HomePage />} />

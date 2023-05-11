@@ -16,6 +16,7 @@ export default function StaffRegistPage() {
         <div className='dashboard shoplist'>
             <Sidebar active_num={0} />
             <div className="board">
+                <div className="mt-[50px] hidden sp:block"></div>
                 <h2>すべての店舗情報一覧</h2>
                 <p className='text-[13px] mt-[10px] font-bold'>店舗一覧を表示しています。「ログイン」ボタンからはパスワード無しで入れます。</p>
                 <h3 className='mt-[50px]'>店舗一覧</h3>
@@ -25,14 +26,22 @@ export default function StaffRegistPage() {
                 </div>
                 <p className='text-[13px] mt-[10px] font-bold'>複数の単語で検索できます。入力されたいずれかの単語を含む店舗を一覧表示します。</p>
                 <div className="mt-[75px] rounded-[10px] shadow-md">
-                    <div className='flex justify-between items-center my-auto px-[50px] h-[75px]'>
+                    <div className='flex justify-between items-center my-auto px-[50px] h-[75px] sp:p-0'>
                         <Pagination total={4} current={0} />
                         <div className="btn-purple w-[120px] h-[40px] text-[13px]">店舗を追加</div>
                     </div>
                     <table className='w-full text-center'>
                         <tr className='bg-[#F1F3F9] w-full h-[40px]'>
-                            <th className='w-[25%] text-[12px] text-[#8898AA]'>店舗ID</th>
-                            <th className='w-[15%] text-[12px] text-[#8898AA]'>管理用ID</th>
+                            <th className='w-[25%] text-[12px] text-[#8898AA] relative'>
+                                店舗ID
+                                <div className="arrow-up w-[7px] h-[4px] right-0 top-[13px]"></div>
+                                <div className="arrow-down w-[7px] h-[4px] right-0 bottom-[13px]"></div>
+                            </th>
+                            <th className='w-[15%] text-[12px] text-[#8898AA] relative'>
+                                管理用ID
+                                <div className="arrow-up w-[7px] h-[4px] right-0 top-[13px]"></div>
+                                <div className="arrow-down w-[7px] h-[4px] right-0 bottom-[13px]"></div>
+                            </th>
                             <th className='w-[15%] text-[12px] text-[#8898AA]'>店舗名</th>
                             <th className='w-[45%]'></th>
                         </tr>
@@ -41,8 +50,8 @@ export default function StaffRegistPage() {
                                 <td className='text-[13px] font-bold'>{item.id}</td>
                                 <td className='text-[13px] font-bold'>{item.userId}</td>
                                 <td className='text-[13px] font-bold'>{item.name}</td>
-                                <td>
-                                    <div className="btn-gradient w-[178px] h-[34px] my-auto ml-auto mr-[30px] text-[12px]" onClick={index => clickLogin}>ログイン</div>
+                                <td className=''>
+                                    <div className="btn-gradient max-w-[178px] h-[34px] my-auto ml-auto mr-[30px] text-[12px] sp:w-full before:w-[10px] before:h-[10px]" onClick={index => clickLogin}>ログイン</div>
                                 </td>
                             </tr>))
                         }

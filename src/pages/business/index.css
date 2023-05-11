@@ -8,6 +8,9 @@
     position: absolute;
     z-index: 999;
     height: 100%;
+    width: 342px;
+    padding-top: 62px;
+    padding-bottom: 62px;
 }
 
 .business-sidebar .ttl {
@@ -43,9 +46,12 @@
 }
 
 .business .board {
-    padding-left:342px;
+    padding-left: 362px;
+    padding-right: 20px;
     padding-bottom: 250px;
     width: 100%;
+    height: 100%;
+    min-height: 100vh;
     position: relative;
     background-color: #F1F3F9;
     z-index: 1;
@@ -64,7 +70,8 @@
 
 .business .header {
     padding-top: 75px;
-    width: 802px;
+    max-width: 802px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -112,7 +119,7 @@
 }
 
 .business .cont {
-    width: 802px;
+    max-width: 802px;
     background-color: white;
     box-shadow: 0 5px 5px #ccc;
     margin-left: auto;
@@ -144,9 +151,12 @@
 
 .bhn .react-datepicker-popper {
     padding-top: 0 !important;
+    z-index: 10;
 }
 
-.bhn .react-datepicker__day-name, .bhn .react-datepicker__day, .bhn .react-datepicker__time-name {
+.bhn .react-datepicker__day-name,
+.bhn .react-datepicker__day,
+.bhn .react-datepicker__time-name {
     width: 36px !important;
     height: 36px !important;
     display: inline-flex;
@@ -168,7 +178,7 @@
     border-bottom: 1px solid #ddd;
 }
 
-.bhn .react-datepicker__day--selected{
+.bhn .react-datepicker__day--selected {
     background-color: #7764E433;
     border-radius: 50px;
     margin: 9px;
@@ -205,64 +215,92 @@ input[type=time] {
     font-size: 14px;
     font-family: helvetica;
     width: 180px;
-  }
-  
-  /* Wrapper around the hour, minute, second, and am/pm fields as well as 
+}
+
+/* Wrapper around the hour, minute, second, and am/pm fields as well as 
   the up and down buttons and the 'X' button */
-  input[type=time]::-webkit-datetime-edit-fields-wrapper {
+input[type=time]::-webkit-datetime-edit-fields-wrapper {
     display: flex;
-  }
-  
-  /* The space between the fields - between hour and minute, the minute and 
+}
+
+/* The space between the fields - between hour and minute, the minute and 
   second, second and am/pm */
-  input[type=time]::-webkit-datetime-edit-text {
+input[type=time]::-webkit-datetime-edit-text {
     padding: 19px 4px;
-  }
-  
-  /* The naming convention for the hour, minute, second, and am/pm field is
+}
+
+/* The naming convention for the hour, minute, second, and am/pm field is
   `-webkit-datetime-edit-{field}-field` */
-  
-  /* Hour */
-  input[type=time]::-webkit-datetime-edit-hour-field {
+
+/* Hour */
+input[type=time]::-webkit-datetime-edit-hour-field {
     background-color: #f2f4f5;
     border-radius: 15%;
     padding: 19px 13px;
-  }
-  
-  /* Minute */
-  input[type=time]::-webkit-datetime-edit-minute-field {
+}
+
+/* Minute */
+input[type=time]::-webkit-datetime-edit-minute-field {
     background-color: #f2f4f5;
     border-radius: 15%;
     padding: 19px 13px;
-  }
-  
-  /* AM/PM */
-  input[type=time]::-webkit-datetime-edit-ampm-field {
+}
+
+/* AM/PM */
+input[type=time]::-webkit-datetime-edit-ampm-field {
     background-color: #7155d3;
     border-radius: 15%;
     color: #fff;
     padding: 19px 13px;
-  }
-  
-  /* 'X' button for resetting/clearing time */
-  input[type=time]::-webkit-clear-button {
-    display: none;
-  }
-  
-  /* Up/Down arrows for incrementing/decrementing the value */
-  input[type=time]::-webkit-inner-spin-button {
-    display: none;
-  }
+}
 
-.bhn input, .bhn textarea{
+/* 'X' button for resetting/clearing time */
+input[type=time]::-webkit-clear-button {
+    display: none;
+}
+
+/* Up/Down arrows for incrementing/decrementing the value */
+input[type=time]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.bhn input,
+.bhn textarea,
+.bhn select {
     background-color: #f7fafc;
     border-radius: 5px;
     box-shadow: 3px 5px 5px #ddd;
 }
 
-.bhn input {
+.bhn input,
+.bhn select {
     height: 50px;
     padding: 0 27px;
+}
+
+.bhn .select {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.bhn .select::before {
+    position: absolute;
+    content: '';
+    right: 1px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+}
+
+.bhn .select::after {
+    position: absolute;
+    content: '';
+    right: 15px;
+    width: 14px;
+    height: 8px;
+    background-image: url('../../img/arrow-dropdown-02.png');
 }
 
 .bhn textarea {
@@ -292,7 +330,8 @@ input[type=time] {
     position: absolute;
 }
 
-.businesshiringconform input, .businesshiringconform textarea {
+.businesshiringconform input,
+.businesshiringconform textarea {
     background-color: #fff;
     border: none;
     box-shadow: none;
@@ -320,6 +359,13 @@ input[type=time] {
 
 .bhome .rbc-calendar {
     height: 732px;
+    overflow-x: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.bhome .rbc-toolbar .rbc-toolbar-label {
+    display: none;
 }
 
 .bhome .rbc-btn-group {
@@ -398,4 +444,43 @@ input[type=time] {
 
 .bhome .rbc-event-content {
     font-size: 8px;
+}
+
+@media (max-width: 1024px) {
+    .business {
+        display: block;
+    }
+
+    .business-sidebar {
+        left: -100%;
+        width: 100%;
+    }
+
+    .business .board {
+        padding: 20px;
+    }
+
+    .business .header h2 {
+        font-size: 30px;
+    }
+
+    .business .btn-box .btn {
+        margin-right: 10px;
+    }
+
+    .bhn .react-datepicker-wrapper input {
+        width: 100%;
+    }
+
+    .bhn input[type=time] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .alarm-box {
+        top: 40px !important;
+        right: auto !important;
+        left: 0;
+    }
 }

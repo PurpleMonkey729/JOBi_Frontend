@@ -22,7 +22,7 @@ export default function StaffRegistPage() {
           </div>
         </div>
         <div className="row">
-          <div className="left">法人名または個人事業主<br />(カタカナ)</div>
+          <div className="left">法人名または個人事業主<br className='sp:hidden' />(カタカナ)</div>
           <div className="right">
             <input type="text" placeholder='カタカナ' className='w-[497px]' />
           </div>
@@ -42,23 +42,27 @@ export default function StaffRegistPage() {
         <div className="row">
           <div className="left">業種</div>
           <div className="right">
-            <select name="" id="" className='w-[299px] h-[100%] pl-[20px]'>
-              <option disabled selected>こちらから選択してください</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
+            <div className="select">
+              <select name="" id="">
+                <option disabled selected>こちらから選択してください</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
           </div>
         </div>
         <div className="row">
           <div className="left">任せたい業務</div>
           <div className="right">
-            <select name="" id="" className='w-[299px] h-[100%] pl-[20px]'>
-              <option disabled selected>こちらから選択してください</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
+            <div className="select">
+              <select name="" id="">
+                <option disabled selected>こちらから選択してください</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
           </div>
         </div>
         <div className="row">
@@ -68,8 +72,8 @@ export default function StaffRegistPage() {
               ＊ 該当する業務がない場合は「その他」を選択してください。<br />＊ 任せたい業務が複数ある場合は、任せる頻度の高い業務を選択してください。</p>
           </div>
         </div>
-        <div className="flex mt-[25px]">
-          <div className="w-[242px] h-[45px] flex justify-end items-center">現状の課題</div>
+        <div className="flex mt-[25px] sp:block">
+          <div className="w-[242px] h-[45px] flex justify-end items-center sp:justify-center sp:w-full">現状の課題</div>
           <div className="ml-[10px]">
             <div className="mt-[7px]"></div>
             <Checkbox str='スタッフの休みが多くシフトの穴が多い' />
@@ -97,12 +101,14 @@ export default function StaffRegistPage() {
         <div className="row">
           <div className="left">都道府県</div>
           <div className="right">
-            <select name="" id="" className='w-[299px] h-[100%] pl-[20px]'>
-              <option disabled selected>こちらから選択してください</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
+            <div className="select">
+              <select name="" id="">
+                <option disabled selected>こちらから選択してください</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
           </div>
         </div>
         <div className="row">
@@ -119,8 +125,8 @@ export default function StaffRegistPage() {
         </div>
         <div className="row">
           <div className="left">適格請求番号をお持ちの方</div>
-          <div className="right flex items-center">
-            <input type="text" placeholder='番号（10桁）' className='w-[250px] mr-[10px]' />
+          <div className="right flex items-center sp:block">
+            <input type="text" placeholder='番号（10桁）' className='w-[250px] mr-[10px] sp:mb-[10px]' />
             <Checkbox str='適格請求番号を持っていない' />
           </div>
         </div>

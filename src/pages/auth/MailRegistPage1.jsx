@@ -36,7 +36,7 @@ export default function MailRegistPage1() {
           </div>
         </p>
         <input type="text" name="" id="" className='w-full h-[45px] mt-[15px] text-[16px] px-[10px] py-[3px] text-center' placeholder='メールアドレス' />
-        <div className="btn-gradient w-[367px] h-[71px] mt-[57px] mx-auto text-[18px]" onClick={registEmail}>アカウントの開設をはじめる</div>
+        <div className="btn-gradient w-[367px] h-[71px] mt-[57px] mx-auto text-[18px] sp:w-[350px] before:w-[12px] before:h-[12px]" onClick={registEmail}>アカウントの開設をはじめる</div>
       </div>
     </div>
   );

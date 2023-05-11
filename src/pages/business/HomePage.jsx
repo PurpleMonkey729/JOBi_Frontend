@@ -77,7 +77,7 @@ export default function BusinessHomePage() {
             <Sidebar active_num={0} />
             <div className="board">
                 <div className="header">
-                    <div className="absolute right-[70px] top-[80px]">
+                    <div className="alarm-box absolute right-[70px] top-[80px]">
                         <div className="relative flex">
                             <div className="absolute w-[20px] h-[20px] top-[-10px] left-[-10px] rounded-full bg-[#FA8673] text-white font-bold text-[12px] flex justify-center items-center">1</div>
                             <img src='src/img/icon-bell.png' alt="icon-bell" className='mr-[10px] w-[20px] h-[22px]' />
@@ -98,6 +98,7 @@ export default function BusinessHomePage() {
                     <p className='mt-[30px]'>求人一覧（カレンダー表示）</p>
                 </div>
                 <div className="cont mt-[10px] pb-[30px] relative">
+                    <div className="absolute left-[50%] top-[45px] cal-ttl translate-x-[-50%] db:left-[25px] db:translate-x-0 db:top-[25px]">2023年5月</div>
                     <div className="absolute right-[42px] top-[13px]">
                         <div className="flex items-center h-[18px]">
                             <div className="w-[12px] h-[12px] mr-[12px] bg-[#959595]"></div>
@@ -125,7 +126,6 @@ export default function BusinessHomePage() {
                                 let newStyle = {
                                     backgroundColor: "gray",
                                 };
-
                                 if (event.type === "start")
                                     newStyle.backgroundColor = "#959595";
                                 else if (event.type === "end")
@@ -139,252 +139,7 @@ export default function BusinessHomePage() {
                                 };
                             }
                         }
-                    // onSelectEvent={(event) => alert(event.title)}
-                    // onSelectSlot={handleSelect}
                     />
-                    {/* 
-                    <table className="w-[777px] mx-auto">
-                        <thead>
-                            <tr>
-                                <th className="p-2 w-[111px] h-[37px] bg-[#F7FAFC] text-[#A3A6B4] text-center text-[7px] font-bold">SUN</th>
-                                <th className="p-2 w-[111px] h-[37px] bg-[#F7FAFC] text-[#A3A6B4] text-center text-[7px] font-bold">MON</th>
-                                <th className="p-2 w-[111px] h-[37px] bg-[#F7FAFC] text-[#A3A6B4] text-center text-[7px] font-bold">TUE</th>
-                                <th className="p-2 w-[111px] h-[37px] bg-[#F7FAFC] text-[#A3A6B4] text-center text-[7px] font-bold">WED</th>
-                                <th className="p-2 w-[111px] h-[37px] bg-[#F7FAFC] text-[#A3A6B4] text-center text-[7px] font-bold">THU</th>
-                                <th className="p-2 w-[111px] h-[37px] bg-[#F7FAFC] text-[#A3A6B4] text-center text-[7px] font-bold">FRI</th>
-                                <th className="p-2 w-[111px] h-[37px] bg-[#F7FAFC] text-[#A3A6B4] text-center text-[7px] font-bold">SAT</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr className="text-center h-20">
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA33] font-bold text-right pt-[10px] pr-[5px] text-[9px]">31</div>
-                                        <div className="bottom pt-[5px]">
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">1</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">2</div>
-                                        <div className="bottom pt-[5px]">
-                                            <div className="event bg-[#707070] text-white font-bold text-[8px] rounded p-1 mb-1">Call with Dave</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">3</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">4</div>
-                                        <div className="bottom pt-[5px]">
-                                            <div className="event bg-[#F53C56] text-white font-bold text-[8px] rounded p-1 mb-1">Lunch Meeting</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">5</div>
-                                        <div className="bottom pt-[5px]">
-                                            <div className="event bg-[#2C92D2] text-white font-bold text-[8px] rounded p-1 mb-1">Product Launch</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">6</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr className="text-center h-20">
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">7</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">8 </div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">9</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">10</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">11</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">12</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">13</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr className="text-center h-20">
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">14</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">15</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">16</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">17</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">18</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">19</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">20</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr className="text-center h-20">
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">21</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">22</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">23</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">24</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">25</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">26</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">27</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr className="text-center h-20">
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">28</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">29</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA] font-bold text-right pt-[10px] pr-[5px] text-[9px]">30</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA33] font-bold text-right pt-[10px] pr-[5px] text-[9px]">1</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA33] font-bold text-right pt-[10px] pr-[5px] text-[9px]">2</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA33] font-bold text-right pt-[10px] pr-[5px] text-[9px]">3</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                                <td className="border border-[#F7FAFC] p-1 w-[111px] h-[111px]">
-                                    <div className="w-full h-[111px] overflow-hidden">
-                                        <div className="top text-[#8898AA33] font-bold text-right pt-[10px] pr-[5px] text-[9px]">4</div>
-                                        <div className="bottom pt-[5px]"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table> */}
                 </div>
             </div>
         </div>

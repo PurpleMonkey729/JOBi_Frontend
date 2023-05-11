@@ -7,7 +7,7 @@ export default function BusinessWorkerRatingPage() {
             <Sidebar active_num={6} />
             <div className="board">
                 <div className="header">
-                    <div className="absolute right-[70px] top-[80px]">
+                    <div className="alarm-box absolute right-[70px] top-[80px]">
                         <div className="relative flex">
                             <div className="absolute w-[20px] h-[20px] top-[-10px] left-[-10px] rounded-full bg-[#FA8673] text-white font-bold text-[12px] flex justify-center items-center">1</div>
                             <img src='src/img/icon-bell.png' alt="icon-bell" className='mr-[10px] w-[20px] h-[22px]' />
@@ -25,11 +25,11 @@ export default function BusinessWorkerRatingPage() {
                     </div>
                     <div className="mt-[20px] pb-[20px] border-b-[1px] border-[#707070]">
                         <div className="text-[15px] font-bold">GOOD / BADを選択</div>
-                        <div className="mt-[10px] flex items-center h-[55px]">
-                            <img src='src/img/icon-thumb-up.png' alt="icon-thumb-up" className='mr-[10px]' />
-                            <div className="text-[15px] font-bold mr-[30px]">よかった</div>
-                            <img src='src/img/icon-thumb-down.png' alt="icon-thumb-down" className='mr-[10px]' />
-                            <div className="text-[15px] font-bold mr-[10px]">よくなかった</div>
+                        <div className="mt-[10px] flex items-center">
+                            <img src='src/img/icon-thumb-up.png' alt="icon-thumb-up" className='mr-[10px] db:w-[30px]' />
+                            <div className="text-[15px] font-bold mr-[30px] db:text-[12px]">よかった</div>
+                            <img src='src/img/icon-thumb-down.png' alt="icon-thumb-down" className='mr-[10px] db:w-[30px]' />
+                            <div className="text-[15px] font-bold mr-[10px] db:text-[12px]">よくなかった</div>
                         </div>
                     </div>
                     <div className="border-b-[1px] border-[#707070] pt-[30px] pb-[20px]">

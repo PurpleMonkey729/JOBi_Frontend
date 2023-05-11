@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function BusinessHiringListPage() {
     const navigate = useNavigate();
-    
+
     const tableData = [
         { date: "2023/04/25", time: "11:00~17:00", name: "＜ホールスタッフ募集！＞やよい軒 北谷美浜店　未経験者歓迎！", number: "3/3" },
         { date: "2023/04/27", time: "11:00~17:00", name: "＜ホールスタッフ募集！＞やよい軒 北谷美浜店　未経験者歓迎！", number: "2/5" },
@@ -22,11 +22,11 @@ export default function BusinessHiringListPage() {
     const goModifyRequest = () => {
         navigate('../modifyrequest');
     }
-    
+
     const goWorkerRating = () => {
         navigate('../workerrating');
     }
-    
+
     const goMessage = () => {
         navigate('../message');
     }
@@ -40,7 +40,7 @@ export default function BusinessHiringListPage() {
             <Sidebar active_num={3} />
             <div className="board">
                 <div className="header">
-                    <div className="absolute right-[70px] top-[80px]">
+                    <div className="alarm-box absolute right-[70px] top-[80px]">
                         <div className="relative flex">
                             <div className="absolute w-[20px] h-[20px] top-[-10px] left-[-10px] rounded-full bg-[#FA8673] text-white font-bold text-[12px] flex justify-center items-center">1</div>
                             <img src='src/img/icon-bell.png' alt="icon-bell" className='mr-[10px] w-[20px] h-[22px]' />
@@ -67,31 +67,37 @@ export default function BusinessHiringListPage() {
                     <div className='flex justify-between items-center my-auto px-[50px] h-[75px]'>
                         <Pagination total={1} current={0} />
                     </div>
-                    <table className='w-full'>
-                        <tr className='bg-[#F1F3F9] text-left w-full h-[40px]'>
-                            <th className='text-[12px] text-[#8898AA] pl-[30px]'>日付</th>
-                            <th className='text-[12px] text-[#8898AA] pl-[10px]'>時間</th>
-                            <th className='text-[12px] w-[190px] text-[#8898AA] pl-[10px]'>店舗名</th>
-                            <th className='text-[12px] text-[#8898AA] pl-[10px]'>募集定員</th>
-                            <th></th>
-                        </tr>
-                        {
-                            tableData.map((item, index) => (<tr className={clsx('w-full h-[87px]', { 'bg-[#F7FAFC]': index % 2 === 1 })}>
-                                <td className=' font-bold pl-[30px]'>{item.date}</td>
-                                <td className=' font-bold pl-[10px]'>{item.time}</td>
-                                <td className='text-[11px] font-bold pl-[10px]'>{item.name}</td>
-                                <td className=' font-bold pl-[10px]'>{item.number}</td>
-                                <td className='h-[87px] flex justify-center items-center'>
-                                    <div className='flex'>
-                                        <div className="btn-purple  w-[52px] h-[50px] text-[12px] mr-[10px]">招待</div>
-                                        <div className="btn-purple  w-[65px] h-[50px] text-[12px] mr-[10px]">ワーカー</div>
-                                        <div className="btn-purple  w-[80px] h-[50px] text-[12px] mr-[10px]">出退勤<br />QRコード表示</div>
-                                        <div className=" border-[1px] bg-[#172B4D] rounded-[5px] w-[45px] h-[50px] flex justify-center items-center text-[9px] text-white hover:cursor-pointer hover:opacity-50">修正依頼</div>
-                                    </div>
-                                </td>
-                            </tr>))
-                        }
-                    </table>
+                    <div className='overflow-x-auto'>
+                        <table className='w-[802px]'>
+                            <tr className='bg-[#F1F3F9] text-left w-full h-[40px]'>
+                                <th className='text-[12px] text-[#8898AA] pl-[30px] relative'>
+                                    日付
+                                    <div className="arrow-up w-[7px] h-[4px] right-[10px] top-[13px]"></div>
+                                    <div className="arrow-down w-[7px] h-[4px] right-[10px] bottom-[13px]"></div>
+                                </th>
+                                <th className='text-[12px] text-[#8898AA] pl-[10px]'>時間</th>
+                                <th className='text-[12px] w-[190px] text-[#8898AA] pl-[10px]'>店舗名</th>
+                                <th className='text-[12px] text-[#8898AA] pl-[10px]'>募集定員</th>
+                                <th></th>
+                            </tr>
+                            {
+                                tableData.map((item, index) => (<tr className={clsx('w-full h-[87px]', { 'bg-[#F7FAFC]': index % 2 === 1 })}>
+                                    <td className=' font-bold pl-[30px]'>{item.date}</td>
+                                    <td className=' font-bold pl-[10px]'>{item.time}</td>
+                                    <td className='text-[11px] font-bold pl-[10px]'>{item.name}</td>
+                                    <td className=' font-bold pl-[10px]'>{item.number}</td>
+                                    <td className='min-h-[87px] flex justify-center items-center pr-[10px]'>
+                                        <div className='flex'>
+                                            <div className="btn-purple  w-[52px] h-[50px] text-[12px] mr-[10px]">招待</div>
+                                            <div className="btn-purple  w-[65px] h-[50px] text-[12px] mr-[10px]">ワーカー</div>
+                                            <div className="btn-purple  w-[80px] h-[50px] text-[12px] mr-[10px]">出退勤<br />QRコード表示</div>
+                                            <div className=" border-[1px] bg-[#172B4D] rounded-[5px] w-[45px] h-[50px] flex justify-center items-center text-[9px] text-white hover:cursor-pointer hover:opacity-50">修正依頼</div>
+                                        </div>
+                                    </td>
+                                </tr>))
+                            }
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

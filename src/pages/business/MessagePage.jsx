@@ -18,7 +18,7 @@ export default function BusinessMessagePage() {
             <Sidebar active_num={4} />
             <div className="board">
                 <div className="header">
-                    <div className="absolute right-[70px] top-[80px]">
+                    <div className="alarm-box absolute right-[70px] top-[80px]">
                         <div className="relative flex">
                             <div className="absolute w-[20px] h-[20px] top-[-10px] left-[-10px] rounded-full bg-[#FA8673] text-white font-bold text-[12px] flex justify-center items-center">1</div>
                             <img src='src/img/icon-bell.png' alt="icon-bell" className='mr-[10px] w-[20px] h-[22px]' />
@@ -40,7 +40,7 @@ export default function BusinessMessagePage() {
                             <img src={'src/img/' + item.photo + '.png'} alt="photo" />
                             <div className='ml-[27px]'>
                                 <div className="text-[16px] text-[#25265E]">{item.name}</div>
-                                <div className="text-[14px] text-[#787993] w-[280px] truncate mt-[10px]">{item.state_msg}</div>
+                                <div className="text-[14px] text-[#787993] w-[280px] truncate mt-[10px] db:w-[100px]">{item.state_msg}</div>
                             </div>
                             <div className="text-[12px] text-[#787993] ml-auto mb-[30px]">{item.time}</div>
                         </div>

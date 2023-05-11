@@ -41,8 +41,6 @@ a {
   content: '';
   position: absolute;
   right: 5%;
-  width: 5%;
-  height: 27%;
   background-image: url(./img/arrow-right-01.png);
   z-index: 1;
 }
@@ -151,6 +149,89 @@ input[type=radio] {
 
 .business {
   font-size: 15px;
+}
+
+.arrow-down {
+  position: absolute;
+  background-image: url('./img/arrow-dropdown-02.png');
+}
+
+.arrow-up {
+  position: absolute;
+  transform: rotate(180deg);
+  background-image: url('./img/arrow-dropdown-02.png');
+}
+
+.arrow-left {
+  position: absolute;
+  transform: rotate(90deg);
+  background-image: url('./img/arrow-dropdown-02.png');
+}
+
+.arrow-right {
+  position: absolute;
+  transform: rotate(270deg);
+  background-image: url('./img/arrow-dropdown-02.png');
+}
+
+@media (max-width: 550px) {
+  .arrow-down, .arrow-left, .arrow-right, .arrow-up {
+    display: none;
+  }
+  .pagination .arrow-left, .pagination .arrow-right {
+    display: block;
+  }
+  .bhn .arrow-down {
+    display: block;
+  }
+}
+
+@font-face {
+  font-family: 'cns';
+  font-style: normal;
+  font-weight: normal;
+  src: local('cns'), url('./font/cns.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'meiryo';
+  font-style: normal;
+  font-weight: normal;
+  src: local('meiryo'), url('./font/meiryo.ttc') format('ttc');
+}
+
+@font-face {
+  font-family: 'kaku';
+  font-style: normal;
+  font-weight: normal;
+  src: local('kaku'), url('./font/kaku.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'gotham';
+  font-style: normal;
+  font-weight: normal;
+  src: local('gotham'), url('./font/gotham.ttf') format('ttf');
+}
+
+.regist {
+  font-family: 'meiryo';
+}
+
+.btn-gradient, .btn-blue, .btn-gray, .btn-purple {
+  font-family: 'cns';
+}
+
+input, select {
+  font-family: 'gotham';
+}
+
+.business {
+  font-family: 'kaku';
+}
+
+.business-sidebar .item {
+  font-family: 'gotham';
 }
 
 /* 

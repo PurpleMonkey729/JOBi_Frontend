@@ -29,14 +29,14 @@ export default function AccountRegistPage() {
         <div className="row">
           <div className="left">ログイン用メールアドレス</div>
           <div className="right">
-            <p className='h-[100%] pl-[20px] flex items-center'>kimura@minepro.co.jp(編集不可)</p>
+            <p className='h-[100%] pl-[20px] flex items-center sp:justify-center'>kimura@minepro.co.jp(編集不可)</p>
           </div>
         </div>
         <div className="row">
           <div className="left">パスワード</div>
           <div className="right">
             <input type="text" placeholder='パスワード' className='w-[299px]' />
-            <div className='h-[100%] inline-flex items-center text-[red] pl-[10px]'>8文字以上（半角英数字）</div>
+            <div className='h-[100%] inline-flex items-center text-[red] pl-[10px] sp:block sp:text-center'>8文字以上（半角英数字）</div>
           </div>
         </div>
         <div className="row">

@@ -29,8 +29,8 @@ export default function ShopRegistPage1() {
           </div>
         </div>
         <div className="flex mt-[10px]">
-          <div className="w-[242px]"></div>
-          <div className="ml-[10px]">
+          <div className="w-[242px] sp:hidden"></div>
+          <div className="ml-[10px] sp:ml-0">
             <p className='text-gray-600 text-[12px]'>
               ワーカー側のアプリに表示される勤務先名となります。<br />店舗が存在しない場合は、法人名または屋号を入力してください。</p>
           </div>
@@ -51,12 +51,14 @@ export default function ShopRegistPage1() {
         <div className="row">
           <div className="left">都道府県</div>
           <div className="right">
-            <select name="" id="" className='w-[299px] h-[100%] pl-[20px]'>
-              <option disabled selected>こちらから選択してください</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
+            <div className="select">
+              <select name="" id="" className='w-[299px] h-[100%] pl-[20px]'>
+                <option disabled selected>こちらから選択してください</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
           </div>
         </div>
         <div className="row">

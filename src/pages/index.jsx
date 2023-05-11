@@ -4,6 +4,8 @@ import AccountRegistPage from "./auth/AccountRegistPage";
 import StaffRegistPage from "./auth/StaffRegistPage";
 import ShopRegistPage1 from "./auth/ShopRegistPage1";
 import ShopRegistPage2 from "./auth/ShopRegistPage2";
+import ServiceTermPage from "./auth/ServiceTermPage";
+import PrivacyPolicyPage from "./auth/PrivacyPolicyPage";
 import LoginPage from "./auth/LoginPage";
 import ShopListPage from "./dashboard/ShopListPage";
 import HomePage from "./business/HomePage";
@@ -29,6 +31,8 @@ export {
   StaffRegistPage,
   ShopRegistPage1,
   ShopRegistPage2,
+  ServiceTermPage,
+  PrivacyPolicyPage,
   LoginPage,
   ShopListPage,
   HomePage,
