@@ -29,9 +29,12 @@ import {
 } from "./pages";
 
 export default function App() {
+  var userData =  JSON.parse(localStorage.getItem("userData")) || null;
+
   return (
     <Routes>
-      <Route path='/mailregist1' element={<MailRegistPage1 />} />
+      <Route path="/" element={userData ? <Navigate to="/home" replace /> : <Navigate to="/login" replace />} />
+      <Route path='/register' element={<MailRegistPage1 />} />
       <Route path='/mailregist2' element={<MailRegistPage2 />} />
       <Route path='/accountregist' element={<AccountRegistPage />} />
       <Route path='/staffregist' element={<StaffRegistPage />} />
@@ -56,8 +59,8 @@ export default function App() {
       <Route path='/modifyrequest' element={<ModifyRequestPage />} />
       <Route path='/modifyend' element={<ModifyEndPage />} />
       <Route path='/shoprating' element={<ShopRatingPage />} />
-      <Route path='/*' element={<Navigate to='/mailregist1' replace />} />
-      <Route element={<Navigate to='/mailregist1' replace />} />
+      {/* <Route path='/*' element={<Navigate to='/mailregist1' replace />} /> */}
+      
     </Routes>
   );
 }
