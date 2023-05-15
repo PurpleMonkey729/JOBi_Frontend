@@ -15,7 +15,8 @@
     "react-big-calendar": "^1.6.9",
     "react-datepicker": "^4.11.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.11.1"
+    "react-router-dom": "^6.11.1",
+    "rsuite": "^5.33.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

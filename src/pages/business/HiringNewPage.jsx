@@ -3,6 +3,9 @@ import Checkbox from '../../components/Checkbox';
 import { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import { DateRangePicker } from 'rsuite';
+import 'rsuite/dist/rsuite.min.css';
+import { DatePicker as TimePicker } from 'rsuite';
 
 export default function BusinessHiringNewPage() {
     const [startDate, setStartDate] = useState(new Date());
@@ -42,6 +45,7 @@ export default function BusinessHiringNewPage() {
                         <div className="relative mr-[22px] sp:mr-0">
                             <div className="mb-[5px]">働く日時</div>
                             <img src="src/img/icon-calendar-02.png" alt="" className="cal" />
+                            <img src="src/img/icon-clock.png" alt="" className="clock" />
                             <div className="arrow-down w-[14px] h-[8px] z-10 right-[15px] top-[48px]"></div>
                             <div className="arrow-down w-[14px] h-[8px] z-10 right-[15px] top-[118px]"></div>
                             <DatePicker
@@ -50,11 +54,17 @@ export default function BusinessHiringNewPage() {
                                 onChange={(date) => setStartDate(date)}
                             />
                             <div className="mb-[20px]"></div>
-                            <input type="time" />
+                            <DateRangePicker
+                                format="HH:mm"
+                                ranges={[]}
+                                defaultValue={[new Date('2022-02-01 00:00:00'), new Date('2022-05-01 23:59:59')]}
+                                defaultCalendarValue={[new Date('2022-02-01 00:00:00'), new Date('2022-05-01 23:59:59')]}
+                            />
                         </div>
                         <div className="relative sp:mt-[25px]">
                             <div className="mb-[5px]">求人の締め切り日時</div><img src="src/img/icon-calendar-02.png" alt="" className="cal" />
                             <img src="src/img/icon-calendar-02.png" alt="" className="cal" />
+                            <img src="src/img/icon-clock.png" alt="" className="clock" />
                             <div className="arrow-down w-[14px] h-[8px] z-10 right-[15px] top-[48px]"></div>
                             <div className="arrow-down w-[14px] h-[8px] z-10 right-[15px] top-[118px]"></div>
                             <DatePicker
@@ -63,7 +73,12 @@ export default function BusinessHiringNewPage() {
                                 onChange={(date) => setEndDate(date)}
                             />
                             <div className="mb-[20px]"></div>
-                            <input type="time" />
+                            <TimePicker
+                                format="HH:mm"
+                                ranges={[]}
+                                defaultValue={new Date('2022-02-01 00:00:00')}
+                                defaultCalendarValue={new Date('2022-02-01 00:00:00')}
+                            />
                         </div>
                     </div>
                     <div className="flex items-center mt-[20px] flex-wrap">
