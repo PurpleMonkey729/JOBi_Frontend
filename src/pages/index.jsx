@@ -8,6 +8,10 @@ import ServiceTermPage from "./auth/ServiceTermPage";
 import PrivacyPolicyPage from "./auth/PrivacyPolicyPage";
 import LoginPage from "./auth/LoginPage";
 import ShopListPage from "./dashboard/ShopListPage";
+import BusinessInfoPage from "./dashboard/BusinessInfoPage";
+import UseDetailPage from "./dashboard/UseDetailPage";
+import WorkerListPage from "./dashboard/WorkerListPage";
+import ReceiveSettingPage from "./dashboard/ReceiveSettingPage";
 import HomePage from "./business/HomePage";
 import NoticePage from "./business/NoticePage";
 import WorkerPage from "./business/WorkerPage";
@@ -50,4 +54,8 @@ export {
   ModifyRequestPage,
   ModifyEndPage,
   ShopRatingPage,
+  BusinessInfoPage,
+  UseDetailPage,
+  WorkerListPage,
+  ReceiveSettingPage,
 };

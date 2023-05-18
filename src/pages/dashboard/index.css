@@ -104,6 +104,71 @@
     border: 1px solid white;
 }
 
+.dbi .row {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.dbi .row-big {
+    align-items: flex-start;
+}
+
+.dbi .row .left {
+    width: 242px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dbi .row .right {
+    width: 500px;
+    margin-left: 10px;
+}
+
+.dbi .row .right input {
+    height: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.dbi .row .right select {
+    width: 299px;
+    height: 45px;
+    padding-left: 20px;
+}
+
+.dbi input[type=text],
+.dbi select,
+.dbi textarea {
+    box-shadow: inset 1px 1px 5px #ddd;
+}
+
+.dbi .select {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: min-content;
+}
+
+.dbi .select::before {
+    position: absolute;
+    content: '';
+    right: 1px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+}
+
+.dbi .select::after {
+    position: absolute;
+    content: '';
+    right: 10px;
+    width: 15px;
+    height: 10px;
+    background-image: url('../../img/arrow-dropdown.png');
+}
+
 @media (max-width: 1024px) {    
     .dashboard {
         display: block;
@@ -119,6 +184,36 @@
     }
     .btn-ham {
         display: flex;
+    }
+    .dbi .row {
+        display: block;
+        height: auto;
+    }
+
+    .dbi .row .left {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .dbi .row .right {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .dbi .row .right input {
+        width: 100%;
+    }
+
+    .dbi .row .right select {
+        width: 100%;
+    }
+
+    .dbi .mycheckbox {
+        font-size: 13px;
+    }
+
+    .dbi .select {
+        width: 100%;
     }
 }
 

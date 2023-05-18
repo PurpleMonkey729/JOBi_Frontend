@@ -11,6 +11,10 @@ import {
   PrivacyPolicyPage,
   LoginPage,
   ShopListPage,
+  BusinessInfoPage,
+  UseDetailPage,
+  WorkerListPage,
+  ReceiveSettingPage,
   HomePage,
   NoticePage,
   WorkerPage,
@@ -44,6 +48,10 @@ export default function App() {
       <Route path='/privacypolicy' element={<PrivacyPolicyPage />} />
       <Route path='/login' element={<LoginPage />} />
       <Route path='/shoplist' element={<ShopListPage />} />
+      <Route path='/businessinfo' element={<BusinessInfoPage />} />
+      <Route path='/usedetail' element={<UseDetailPage />} />
+      <Route path='/workerlist' element={<WorkerListPage />} />
+      <Route path='/receivesetting' element={<ReceiveSettingPage />} />
       <Route path='/home' element={<HomePage />} />
       <Route path='/notice' element={<NoticePage />} />
       <Route path='/worker' element={<WorkerPage />} />
