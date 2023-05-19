@@ -66,9 +66,21 @@ a {
   border-radius: 5px;
 }
 
-.btn-gradient:hover, .btn-blue:hover, .btn-gray:hover {
+.btn-gradient, .btn-blue, .btn-gray, .btn-purple {
+  box-shadow: 0 0 5px #000000;
+  transition: none;
+}
+
+.btn-gradient:hover, .btn-blue:hover, .btn-gray:hover, .btn-purple:hover {
   cursor: pointer;
-  opacity: .5;
+}
+
+.btn-gradient:active, .btn-blue:active, .btn-gray:active, .btn-purple:active {
+    opacity: 1;
+    box-shadow: none;
+    transform: scale(.95);
+  /* margin-top: 1px;
+  margin-left: 1px; */
 }
 
 .btn-purple {

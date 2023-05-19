@@ -40,6 +40,22 @@ export default function AccountRegistPage() {
           </div>
         </div>
         <div className="row">
+          <div className="left"></div>
+          <div className="right">
+            <div className="text-[red] sp:text-center">以下の条件を満たすパスワードを入力してください。</div>
+            <div className="mt-[10px] flex db:block sp:justify-center db:ml-[30px]">
+              <div className="">
+                <div className="pw-case pw-case-active">最低8文字以上</div>
+                <div className="pw-case">英大文字を含む</div>
+              </div>
+              <div>
+                <div className="pw-case">水資を含む</div>
+                <div className="pw-case">特殊文字(!?#@)を含む</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row">
           <div className="left">パスワード（確認用）</div>
           <div className="right">
             <input type="text" placeholder='パスワード' className='w-[299px]' />

@@ -94,6 +94,32 @@
     background-image: url('../../img/arrow-dropdown.png');
 }
 
+.regist .pw-case {
+    color: #888;
+    padding-left: 25px;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+}
+
+.regist .pw-case::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../img/icon-case-none.png');
+}
+
+.regist .pw-case-active {
+    font-weight: bold;
+    color: #333;
+}
+
+.regist .pw-case-active::before {
+    background-image: url('../../img/icon-case.png');
+}
+
 .login {
     background-image: url('../../img/bg-login.png');
     background-repeat: no-repeat;
