@@ -27,6 +27,7 @@ import MessageDetailPage from "./business/MessageDetailPage";
 import ModifyRequestPage from "./business/ModifyRequestPage";
 import ModifyEndPage from "./business/ModifyEndPage";
 import ShopRatingPage from "./business/ShopRatingPage";
+import Page404 from './Page404';
 
 export {
   MailRegistPage1,
@@ -58,4 +59,5 @@ export {
   UseDetailPage,
   WorkerListPage,
   ReceiveSettingPage,
+  Page404,
 };

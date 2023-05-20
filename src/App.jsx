@@ -30,6 +30,7 @@ import {
   ModifyRequestPage,
   ModifyEndPage,
   ShopRatingPage,
+  Page404,
 } from "./pages";
 
 export default function App() {
@@ -67,7 +68,8 @@ export default function App() {
       <Route path='/modifyrequest' element={<ModifyRequestPage />} />
       <Route path='/modifyend' element={<ModifyEndPage />} />
       <Route path='/shoprating' element={<ShopRatingPage />} />
-      {/* <Route path='/*' element={<Navigate to='/mailregist1' replace />} /> */}
+      <Route path='/page404' element={<Page404 />} />
+      <Route path='/*' element={<Navigate to='/page404' replace />} />
       
     </Routes>
   );
