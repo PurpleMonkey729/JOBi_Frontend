@@ -353,6 +353,10 @@ select {
   animation-delay: 0s;
 }
 
+.p404 span {
+  text-shadow: -10px 5px 0 #d0e9ff;
+}
+
 @keyframes lds-spinner {
   0% {
     opacity: 1;
