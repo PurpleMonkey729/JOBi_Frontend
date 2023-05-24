@@ -26,7 +26,7 @@ export default function BusinessHiringNewPage() {
                     <div className="alarm-box absolute right-[70px] top-[80px]">
                         <div className="relative flex">
                             <div className="absolute w-[20px] h-[20px] top-[-10px] left-[-10px] rounded-full bg-[#FA8673] text-white font-bold text-[12px] flex justify-center items-center">1</div>
-                            <img src='src/img/icon-bell.png' alt="icon-bell" className='mr-[10px] w-[20px] h-[22px]' />
+                            <img src='/src/img/icon-bell.png' alt="icon-bell" className='mr-[10px] w-[20px] h-[22px]' />
                             <div className="text-white font-bold mr-[40px] mt-[4px]">店舗ID：0001</div>
                             <div className="text-white font-bold mt-[4px]">店舗名：那覇新都心店</div>
                         </div>
@@ -44,22 +44,22 @@ export default function BusinessHiringNewPage() {
                     }
                     <div className="flex items-center pb-[20px] border-b-[1px] border-[#707070] sp:block">
                         <div className="mr-[20px]">タイトル</div>
-                        <input type="text" className='w-[600px] h-[50px] px-[20px] py-[5px] border-[1px] border-[#7764E4] text-[#7764E4] rounded-[5px] shadow-md sp:w-full' placeholder='ここに求人タイトル' disabled={conform} />
+                        <input type="text" className='w-[600px] h-[50px] px-[20px] py-[5px] border-[1px] border-[#7764E4] text-[#7764E4] rounded-[5px] shadow-md sp:w-full' placeholder={!conform && 'ここに求人タイトル'} disabled={conform} />
                     </div>
                     <div className="flex items-end mt-[20px] sp:block">
                         <div className="mr-[100px] sp:mr-0">職場の雰囲気がわかる写真</div>
                         <div className="btn-select-img btn-gray w-[112px] h-[31px] sp:mt-[10px]">選択</div>
                     </div>
                     <div className="w-full flex mt-[20px] db:block">
-                        <img src='src/img/photo-worker.png' alt="" className='shadow-md w-[30%] mr-[3%] db:w-full db:mb-[20px]' />
-                        <img src='src/img/photo-worker.png' alt="" className='shadow-md w-[30%] mr-[3%] db:w-full db:mb-[20px]' />
-                        <img src='src/img/photo-worker.png' alt="" className='shadow-md w-[30%] db:w-full' />
+                        <img src='/src/img/photo-worker.png' alt="" className='shadow-md w-[30%] mr-[3%] db:w-full db:mb-[20px]' />
+                        <img src='/src/img/photo-worker.png' alt="" className='shadow-md w-[30%] mr-[3%] db:w-full db:mb-[20px]' />
+                        <img src='/src/img/photo-worker.png' alt="" className='shadow-md w-[30%] db:w-full' />
                     </div>
                     <div className="flex mt-[56px] sp:block">
                         <div className="relative mr-[22px] sp:mr-0">
                             <div className="mb-[5px]">働く日時</div>
-                            <img src="src/img/icon-calendar-02.png" alt="" className="cal" />
-                            <img src="src/img/icon-clock.png" alt="" className="clock" />
+                            <img src="/src/img/icon-calendar-02.png" alt="" className="cal" />
+                            <img src="/src/img/icon-clock.png" alt="" className="clock" />
                             <div className="arrow-down w-[14px] h-[8px] z-10 right-[15px] top-[48px]"></div>
                             <div className="arrow-down w-[14px] h-[8px] z-10 right-[15px] top-[118px]"></div>
                             <DatePicker
@@ -78,9 +78,9 @@ export default function BusinessHiringNewPage() {
                             />
                         </div>
                         <div className="relative sp:mt-[25px]">
-                            <div className="mb-[5px]">求人の締め切り日時</div><img src="src/img/icon-calendar-02.png" alt="" className="cal" />
-                            <img src="src/img/icon-calendar-02.png" alt="" className="cal" />
-                            <img src="src/img/icon-clock.png" alt="" className="clock" />
+                            <div className="mb-[5px]">求人の締め切り日時</div><img src="/src/img/icon-calendar-02.png" alt="" className="cal" />
+                            <img src="/src/img/icon-calendar-02.png" alt="" className="cal" />
+                            <img src="/src/img/icon-clock.png" alt="" className="clock" />
                             <div className="arrow-down w-[14px] h-[8px] z-10 right-[15px] top-[48px]"></div>
                             <div className="arrow-down w-[14px] h-[8px] z-10 right-[15px] top-[118px]"></div>
                             <DatePicker
@@ -101,14 +101,14 @@ export default function BusinessHiringNewPage() {
                     </div>
                     <div className="flex items-center mt-[20px] flex-wrap">
                         <div className="mr-[30px]">休憩</div>
-                        <input type="text" placeholder="60" className='mr-[10px] w-[145px]' disabled={conform} />
+                        <input type="text" placeholder={!conform && "60"} className='mr-[10px] w-[145px]' disabled={conform} />
                         <div className="mr-[80px] sp:mr-[25px]">分</div>
-                        <Checkbox str="休憩なし" />
+                        <Checkbox disabled={conform} str="休憩なし" />
                     </div>
                     <div className="flex mt-[20px] sp:block">
                         <div className="flex items-center sp:block">
                             <div className="mr-[30px]">時給</div>
-                            <input type="text" placeholder="1,000" className='mr-[30px] w-[222px] sp:w-full sp:mr-0' disabled={conform} />
+                            <input type="text" placeholder={!conform && "1,000"} className='mr-[30px] w-[222px] sp:w-full sp:mr-0' disabled={conform} />
                         </div>
                         <div className="flex items-center sp:block sp:mt-[25px]">
                             <div className="mr-[20px]">交通費</div>
@@ -131,48 +131,48 @@ export default function BusinessHiringNewPage() {
                     <div className="flex mt-[20px] sp:block">
                         <div className="w-[100px] min-w-[100px] mt-[15px]">待遇</div>
                         <div className="flex flex-wrap">
-                            <Checkbox str="バイク通勤OK" />
-                            <Checkbox str="車通勤OK" />
-                            <Checkbox str="まかないつき" />
-                            <Checkbox str="未経験者OK" />
-                            <Checkbox str="交通費支給" />
-                            <Checkbox str="自転車通勤OK" />
-                            <Checkbox str="アットホーム" />
+                            <Checkbox disabled={conform} str="バイク通勤OK" />
+                            <Checkbox disabled={conform} str="車通勤OK" />
+                            <Checkbox disabled={conform} str="まかないつき" />
+                            <Checkbox disabled={conform} str="未経験者OK" />
+                            <Checkbox disabled={conform} str="交通費支給" />
+                            <Checkbox disabled={conform} str="自転車通勤OK" />
+                            <Checkbox disabled={conform} str="アットホーム" />
                         </div>
                     </div>
                     <div className="flex mt-[20px] sp:block">
                         <div className="w-[100px] min-w-[100px] mt-[15px]">仕事内容</div>
-                        <textarea name="" id="" placeholder='仕事内容をできるだけ具体的にご記入ください。' className='h-[135px]' disabled={conform}></textarea>
+                        <textarea name="" id="" placeholder={!conform && "仕事内容をできるだけ具体的にご記入ください。"} className='h-[135px]' disabled={conform}></textarea>
                     </div>
                     <div className="flex mt-[20px] sp:block">
                         <div className="w-[100px] min-w-[100px] mt-[15px]">注意事項</div>
-                        <textarea name="" id="" placeholder='求職者に向けて注意事項があればご記入ください。' className='h-[86px]' disabled={conform}></textarea>
+                        <textarea name="" id="" placeholder={!conform && "求職者に向けて注意事項があればご記入ください。"} className='h-[86px]' disabled={conform}></textarea>
                     </div>
                     <div className="flex check-box2  mt-[20px] sp:block">
                         <div className="w-[100px] min-w-[100px] mt-[15px]">持ち物</div>
                         <div className="flex flex-wrap">
-                            <Checkbox str="私服OK" />
-                            <Checkbox str="シューズ貸し出し" />
-                            <Checkbox str="筆記用具" />
-                            <Checkbox str="飲み物・軽食" />
+                            <Checkbox disabled={conform} str="私服OK" />
+                            <Checkbox disabled={conform} str="シューズ貸し出し" />
+                            <Checkbox disabled={conform} str="筆記用具" />
+                            <Checkbox disabled={conform} str="飲み物・軽食" />
                         </div>
                     </div>
                     <div className="flex mt-[20px] sp:block">
                         <div className="w-[100px] min-w-[100px] mt-[15px]">条件</div>
-                        <textarea name="" id="" placeholder='空白可能' className='h-[128px]' disabled={conform}></textarea>
+                        <textarea name="" id="" placeholder={!conform && '空白可能'} className='h-[128px]' disabled={conform}></textarea>
                     </div>
                     <div className="flex flex-wrap sp:block">
                         <div className="flex items-center mt-[20px]">
                             <div className='w-[100px]'>働く住所</div>
-                            <input type="text" placeholder="那覇市" className='w-[121px] mr-[10px] sp:w-full sp:mr-0' disabled={conform} />
+                            <input type="text" placeholder={!conform && "那覇市"} className='w-[121px] mr-[10px] sp:w-full sp:mr-0' disabled={conform} />
                         </div>
                         <div className="flex items-center mt-[20px]">
                             <div className='mr-[5px] sp:mt-[25px] sp:w-[100px] sp:mr-0'>市</div>
-                            <input type="text" placeholder="松尾" className='w-[121px] mr-[10px] sp:w-full sp:mr-0' disabled={conform} />
+                            <input type="text" placeholder={!conform && "松尾"} className='w-[121px] mr-[10px] sp:w-full sp:mr-0' disabled={conform} />
                         </div>
                         <div className="flex items-center mt-[20px]">
                             <div className='mr-[5px] sp:mt-[25px] sp:w-[100px] sp:mr-0'>町村</div>
-                            <input type="text" placeholder="1-2-3" className='w-[280px] sp:w-full sp:mr-0' disabled={conform} />
+                            <input type="text" placeholder={!conform && "1-2-3"} className='w-[280px] sp:w-full sp:mr-0' disabled={conform} />
                         </div>
                     </div>
                 </div>

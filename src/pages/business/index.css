@@ -329,14 +329,15 @@
 .bhn-conform input, .bhn-conform select , .bhn-conform textarea, .bhn-conform .rs-picker{
     border: none;
     box-shadow: none;
+    background-color: white;
 }
 
 .bhn-conform textarea {
     padding-top: 15px;
+    resize: none;
 }
 
 .bhn-conform .arrow-down,
-.bhn-conform .mycheckbox .checkmark,
 .bhn-conform .btn-select-img,
 .bhn-conform .box-btn,
 .bhn-conform .select::before,
@@ -345,27 +346,17 @@
     display: none;
 }
 
+
+.bhn-conform .mycheckbox .checkmark {
+    border-color: transparent;
+}
+
 .bhn-conform select {
     appearance: none;
 }
 
-.businesshiringconform input,
-.businesshiringconform textarea {
-    background-color: #fff;
-    border: none;
-    box-shadow: none;
-}
-
-.businesshiringconform textarea {
-    padding: 15px 30px;
-}
-
-.businesshiringconform .mycheckbox .checkmark {
-    border-color: transparent;
-}
-
-.businesshiringconform .mycheckbox .checkmark::after {
-    display: block;
+.bhn-conform .rs-picker-default.rs-picker-disabled .rs-btn, .rs-picker-default.rs-picker-disabled{
+    background-color: white !important;
 }
 
 .bhome .rbc-toolbar {
