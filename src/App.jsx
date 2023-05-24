@@ -21,7 +21,6 @@ import {
   WorkerRatingPage,
   HiringListPage,
   HiringNewPage,
-  HiringConformPage,
   HiringEndPage,
   UsageDetailPage,
   QRCodePage,
@@ -59,7 +58,6 @@ export default function App() {
       <Route path='/workerrating' element={<WorkerRatingPage />} />
       <Route path='/hiringlist' element={<HiringListPage />} />
       <Route path='/hiringnew' element={<HiringNewPage />} />
-      <Route path='/hiringconform' element={<HiringConformPage />} />
       <Route path='/hiringend' element={<HiringEndPage />} />
       <Route path='/usagedetail' element={<UsageDetailPage />} />
       <Route path='/qrcode' element={<QRCodePage />} />

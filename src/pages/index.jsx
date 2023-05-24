@@ -18,7 +18,6 @@ import WorkerPage from "./business/WorkerPage";
 import WorkerRatingPage from "./business/WorkerRatingPage";
 import HiringListPage from "./business/HiringListPage";
 import HiringNewPage from "./business/HiringNewPage";
-import HiringConformPage from "./business/HiringConformPage";
 import HiringEndPage from "./business/HiringEndPage";
 import QRCodePage from "./business/QRCodePage";
 import UsageDetailPage from "./business/UsageDetailPage";
@@ -46,7 +45,6 @@ export {
   WorkerRatingPage,
   HiringListPage,
   HiringNewPage,
-  HiringConformPage,
   HiringEndPage,
   QRCodePage,
   UsageDetailPage,

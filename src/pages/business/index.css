@@ -256,6 +256,10 @@
     display: none !important;
 }
 
+.rs-picker-disabled {
+    opacity: 1 !important;
+}
+
 .bhn input,
 .bhn textarea,
 .bhn select {
@@ -320,6 +324,29 @@
     color: red;
     margin-top: 10px;
     position: absolute;
+}
+
+.bhn-conform input, .bhn-conform select , .bhn-conform textarea, .bhn-conform .rs-picker{
+    border: none;
+    box-shadow: none;
+}
+
+.bhn-conform textarea {
+    padding-top: 15px;
+}
+
+.bhn-conform .arrow-down,
+.bhn-conform .mycheckbox .checkmark,
+.bhn-conform .btn-select-img,
+.bhn-conform .box-btn,
+.bhn-conform .select::before,
+.bhn-conform .select::after
+{
+    display: none;
+}
+
+.bhn-conform select {
+    appearance: none;
 }
 
 .businesshiringconform input,
