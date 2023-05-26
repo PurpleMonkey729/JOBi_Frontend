@@ -128,7 +128,6 @@
 }
 
 .bhn .box-img {
-    width: 30%;
     box-shadow: 3px 3px 10px #ddd;
     margin-right: 3%;
     position: relative;
@@ -142,8 +141,8 @@
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: -8px;
+    right: -8px;
     rotate: 45deg;
     background-color:crimson;
     color: white;
@@ -374,9 +373,10 @@
 .bhn-conform .btn-select-img,
 .bhn-conform .box-btn,
 .bhn-conform .select::before,
-.bhn-conform .select::after
+.bhn-conform .select::after,
+.bhn-conform .btn-del-img
 {
-    display: none;
+    display: none !important;
 }
 
 
