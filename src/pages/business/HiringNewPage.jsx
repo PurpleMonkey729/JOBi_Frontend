@@ -12,6 +12,7 @@ export default function BusinessHiringNewPage() {
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
     const [conform, setConform] = useState(false);
+    const array3 = [1, 2, 3];
     const clickConform = () => {
         setConform(true);
     }
@@ -51,18 +52,14 @@ export default function BusinessHiringNewPage() {
                         <div className="btn-select-img btn-gray w-[112px] h-[31px] sp:mt-[10px]">選択</div>
                     </div>
                     <div className="w-full flex mt-[20px] db:block">
-                        <div className="box-img">
-                            <img src='/src/img/photo-worker.png' alt="" className='db:w-full db:mb-[20px]' />
-                            <div className="btn-del-img">+</div>
-                        </div>
-                        <div className="box-img">
-                            <img src='/src/img/photo-worker.png' alt="" className='db:w-full db:mb-[20px]' />
-                            <div className="btn-del-img">+</div>
-                        </div>
-                        <div className="box-img">
-                            <img src='/src/img/photo-worker.png' alt="" className='db:w-full db:mb-[20px]' />
-                            <div className="btn-del-img">+</div>
-                        </div>
+                        {
+                            array3.map(i =>
+                                <div className="box-img w-[30%] db:w-full">
+                                    <img src='/src/img/photo-worker.png' alt="" className='db:w-full db:mb-[20px]' />
+                                    <div className="btn-del-img">+</div>
+                                </div>
+                            )
+                        }
                     </div>
                     <div className="flex mt-[56px] sp:block">
                         <div className="relative mr-[22px] sp:mr-0">
