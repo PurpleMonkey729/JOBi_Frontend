@@ -130,6 +130,16 @@
     background-image: url('../../img/ttl-login.png');
 }
 
+.login2 {
+    background-image: url('../../img/bg-login2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login2 .ttl {
+    background-image: url('../../img/ttl-login2.png');
+}
+
 @media (max-width: 1024px) {
     .regist-header nav .item {
         font-size: 12px;
