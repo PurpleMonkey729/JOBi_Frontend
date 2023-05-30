@@ -10,6 +10,7 @@ import {
   ServiceTermPage,
   PrivacyPolicyPage,
   LoginPage,
+  LoginPage2,
   ShopListPage,
   BusinessInfoPage,
   UseDetailPage,
@@ -47,6 +48,7 @@ export default function App() {
       <Route path='/serviceterm' element={<ServiceTermPage />} />
       <Route path='/privacypolicy' element={<PrivacyPolicyPage />} />
       <Route path='/login' element={<LoginPage />} />
+      <Route path='/login2' element={<LoginPage2 />} />
       <Route path='/shoplist' element={<ShopListPage />} />
       <Route path='/businessinfo' element={<BusinessInfoPage />} />
       <Route path='/usedetail' element={<UseDetailPage />} />

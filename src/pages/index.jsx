@@ -7,6 +7,7 @@ import ShopRegistPage2 from "./auth/ShopRegistPage2";
 import ServiceTermPage from "./auth/ServiceTermPage";
 import PrivacyPolicyPage from "./auth/PrivacyPolicyPage";
 import LoginPage from "./auth/LoginPage";
+import LoginPage2 from "./auth/LoginPage2";
 import ShopListPage from "./dashboard/ShopListPage";
 import BusinessInfoPage from "./dashboard/BusinessInfoPage";
 import UseDetailPage from "./dashboard/UseDetailPage";
@@ -38,6 +39,7 @@ export {
   ServiceTermPage,
   PrivacyPolicyPage,
   LoginPage,
+  LoginPage2,
   ShopListPage,
   HomePage,
   NoticePage,
