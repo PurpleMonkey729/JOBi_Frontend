@@ -23,6 +23,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  object-fit: cover;
+}
+
 .pagination div.active {
   color: white;
   border-color: #7764E4;
