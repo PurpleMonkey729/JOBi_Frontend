@@ -28,6 +28,9 @@ import ModifyRequestPage from "./business/ModifyRequestPage";
 import ModifyEndPage from "./business/ModifyEndPage";
 import ShopRatingPage from "./business/ShopRatingPage";
 import Page404 from './Page404';
+import PushAlarmSettingPage from './admin/PushAlarmSettingPage';
+import ShopDetailPage from './admin/ShopDetailPage';
+import WorkerDetailPage from './admin/WorkerDetailPage';
 
 export {
   MailRegistPage1,
@@ -60,4 +63,7 @@ export {
   WorkerListPage,
   ReceiveSettingPage,
   Page404,
+  PushAlarmSettingPage,
+  ShopDetailPage,
+  WorkerDetailPage,
 };

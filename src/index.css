@@ -79,14 +79,18 @@ a {
 .btn-gradient:hover,
 .btn-blue:hover,
 .btn-gray:hover,
-.btn-purple:hover {
+.btn-purple:hover,
+.btn-blue-light:hover,
+.btn-purple-heavy:hover {
   cursor: pointer;
 }
 
 .btn-gradient:active,
 .btn-blue:active,
 .btn-gray:active,
-.btn-purple:active {
+.btn-purple:active,
+.btn-blue-light:active,
+.btn-purple-heavy:active {
   opacity: 1;
   box-shadow: none;
   transform: scale(.95);
