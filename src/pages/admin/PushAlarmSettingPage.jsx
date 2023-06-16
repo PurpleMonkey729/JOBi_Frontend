@@ -3,11 +3,6 @@ import clsx from 'clsx';
 import Checkbox from '../../components/Checkbox';
 
 export default function PushAlarmSettingPage() {
-
-    const clickChange = index => {
-        // Please insert code.
-    }
-
     return (
         <div className='admin'>
             <Sidebar active_num={1} />
