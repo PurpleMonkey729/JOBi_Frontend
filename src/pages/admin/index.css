@@ -111,7 +111,7 @@
     border-radius: 5px;
 }
 
-.pas .btn-blue-light {
+.btn-blue-light {
     width: 179px;
     height: 58px;
     display: flex;
@@ -127,7 +127,7 @@
     margin-top: 35px;
 }
 
-.pas .btn-purple-heavy {
+.btn-purple-heavy {
     width: 286px;
     height: 58px;
     display: flex;
@@ -141,6 +141,23 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 35px;
+}
+
+.btn-pink-light {
+    width: 135px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 36px;
+    box-shadow: 0 0 5px #888;
+    color: white;
+    font-size: 12;
+    background-color: #FA8673;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .asd .row {
@@ -157,6 +174,11 @@
     width: 25%;
 }
 
+.awd .row .left {
+    justify-content: flex-start;
+    color: #2C92D2;
+}
+
 .asd .row .left-big {
     align-items: flex-start;
 }
@@ -165,15 +187,37 @@
     width: 70%;
 }
 
-.asd .row .right input {
+.asd .row .right-txt * {
+    font-size: 13px;
+} 
+
+.asd .row .right .input {
     width: 100%;
     max-width: 386px;
     height: 45px;
     background-color: #F6F9FC;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.asd .row .right .input-big {
+    height: 119px;
 }
 
 .asd .row .right .input-short {
     max-width: 248px;
+}
+
+.photo-show {
+    position: fixed;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: #88888888;
+}
+
+.awd .mycheckbox .checkmark {
+    border-color:transparent;
 }
 
 @media (max-width: 1024px) {    
@@ -191,6 +235,23 @@
     }
     .btn-ham {
         display: flex;
+    }
+    .asd .row {
+        display: block;
+    }
+    .asd .row .left {
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+    .asd .row .right {
+        width: 100%;
+    }
+    .asd .row .right .input {
+        max-width: unset;
+    }
+    .asd .row .right .input-short {
+        max-width: unset;
     }
 }
 

@@ -81,7 +81,8 @@ a {
 .btn-gray:hover,
 .btn-purple:hover,
 .btn-blue-light:hover,
-.btn-purple-heavy:hover {
+.btn-purple-heavy:hover,
+.btn-pink-light:hover {
   cursor: pointer;
 }
 
@@ -90,7 +91,8 @@ a {
 .btn-gray:active,
 .btn-purple:active,
 .btn-blue-light:active,
-.btn-purple-heavy:active {
+.btn-purple-heavy:active,
+.btn-pink-light:active {
   opacity: 1;
   box-shadow: none;
   transform: scale(.95);
@@ -264,6 +266,10 @@ select {
   font-family: 'gotham';
 }
 
+.admin {
+  font-family: 'cns';
+}
+
 .business {
   font-family: 'kaku';
 }
@@ -369,6 +375,10 @@ select {
   100% {
     opacity: 0;
   }
+}
+
+.rating * {
+  font-size: 5px !important;
 }
 
 /* 
