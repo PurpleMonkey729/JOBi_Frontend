@@ -163,7 +163,7 @@
     position: absolute;
     top: 40px;
     left: 25px;
-    z-index: 999;
+    z-index: 10;
 }
 
 .bhn img.clock {
@@ -190,7 +190,7 @@
 
 .bhn .react-datepicker-popper {
     padding-top: 0 !important;
-    z-index: 10;
+    z-index: 11;
 }
 
 .bhn .react-datepicker__day-name,

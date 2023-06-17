@@ -1,12 +1,14 @@
 import Sidebar from './Sidebar';
 import Checkbox from '../../components/Checkbox';
 import { useState } from 'react';
-import DatePicker from 'react-datepicker';
+import DatePicker, { registerLocale } from 'react-datepicker';
+import ja from "date-fns/locale/ja";
 import "react-datepicker/dist/react-datepicker.css";
 import { DateRangePicker } from 'rsuite';
 import 'rsuite/dist/rsuite.min.css';
 import { DatePicker as TimePicker } from 'rsuite';
 import clsx from 'clsx';
+registerLocale("ja", ja);
 
 export default function BusinessHiringNewPage() {
     const [startDate, setStartDate] = useState(new Date());
@@ -19,6 +21,7 @@ export default function BusinessHiringNewPage() {
     const cancelConform = () => {
         setConform(false);
     }
+
     return (
         <div className={clsx('business bhn', { 'bhn-conform': conform })}>
             <Sidebar active_num={3} />
@@ -73,6 +76,8 @@ export default function BusinessHiringNewPage() {
                                 selected={startDate}
                                 onChange={(date) => changeStartDate(date)}
                                 disabled={conform}
+                                locale='ja'
+                                dateFormatCalendar="yyyy年 LLLL"
                             />
                             <div className="mb-[20px]"></div>
                             <DateRangePicker
@@ -81,6 +86,11 @@ export default function BusinessHiringNewPage() {
                                 defaultValue={[new Date('2022-02-01 00:00:00'), new Date('2022-05-01 23:59:59')]}
                                 defaultCalendarValue={[new Date('2022-02-01 00:00:00'), new Date('2022-05-01 23:59:59')]}
                                 disabled={conform}
+                                locale={{
+                                    hours: "時",
+                                    minutes: "分",
+                                    ok: "確認",
+                                }}
                             />
                         </div>
                         <div className="relative sp:mt-[25px]">
@@ -94,6 +104,8 @@ export default function BusinessHiringNewPage() {
                                 selected={endDate}
                                 onChange={(date) => setEndDate(date)}
                                 disabled={conform}
+                                locale='ja'
+                                dateFormatCalendar="yyyy年 LLLL"
                             />
                             <div className="mb-[20px]"></div>
                             <TimePicker
@@ -102,6 +114,11 @@ export default function BusinessHiringNewPage() {
                                 defaultValue={new Date('2022-02-01 00:00:00')}
                                 defaultCalendarValue={new Date('2022-02-01 00:00:00')}
                                 disabled={conform}
+                                locale={{
+                                    hours: "時",
+                                    minutes: "分",
+                                    ok: "確認",
+                                }}
                             />
                         </div>
                     </div>
