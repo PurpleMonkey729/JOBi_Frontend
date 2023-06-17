@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import { useState } from 'react';
 
 const localizer = momentLocalizer(moment);
 
@@ -72,9 +73,20 @@ export default function BusinessHomePage() {
         },
     ];
 
+    const [isShowPhoto, setShowPhoto] = useState(false);
+
     return (
         <div className='business bhome'>
             <Sidebar active_num={0} />
+            {
+                isShowPhoto && <div className="fixed z-[9999] w-[100vw] h-[100vh] bg-[#000000aa]">
+                    <div className="relative w-full h-full flex justify-center items-center">
+                        <img className='' src="/src/img/photo-worker.png" alt="Shop Photo" />
+                        <div className="absolute top-[50px] right-[50px] w-[50px] h-[50px] bg-black rounded-full flex items-center justify-center rotate-[45deg] text-[30px] cursor-pointer text-[white] hover:rotate-[225deg]" onClick={() => setShowPhoto
+                            (false)}>+</div>
+                    </div>
+                </div>
+            }
             <div className="board">
                 <div className="header">
                     <div className="alarm-box absolute right-[70px] top-[80px]">
@@ -85,8 +97,17 @@ export default function BusinessHomePage() {
                             <div className="text-white font-bold mt-[4px]">店舗名：那覇新都心店</div>
                         </div>
                     </div>
-                    <h2>ホーム</h2>
-                    <p className='mt-[15px]'>お好きなメニューを選んでください。</p>
+                    <div className="flex">
+                        <div className="relative w-[100px] h-[100px] sp:mb-[10px] sp:ml-[10px]">
+                            <img className='w-full h-full rounded-full' src="/src/img/photo-worker.png" alt="Shop Photo" />
+                            <img className='w-[30px] h-[30px] absolute bottom-0 right-0 cursor-pointer hover:scale-125' src="/src/img/zoom.png" alt="Zoom Button Image" onClick={() => { setShowPhoto(true) }} />
+                        </div>
+                        <div className="ml-[20px]">
+                            <div className="w-[150px] h-[20px] bg-[#7764E4] text-white flex items-center justify-center rounded-[20px] cursor-pointer mt-[10px] hover:bg-white hover:text-[#7764E4]">Button</div>
+                            <h2>ホーム</h2>
+                            <p className='mt-[0px]'>お好きなメニューを選んでください。</p>
+                        </div>
+                    </div>
                     <div className="btn-box">
                         <div onClick={goHiringNew} className="btn">新規募集</div>
                         <div onClick={goQRCode} className="btn">出退勤<br />QRコード表示</div>
