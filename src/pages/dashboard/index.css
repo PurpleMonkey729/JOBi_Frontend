@@ -8,6 +8,7 @@
     position: absolute;
     width: 342px;
     min-height: 100vh;
+    height: max-content;
     padding-top: 62px;
     margin-left: 60px;
     padding-bottom: 62px;

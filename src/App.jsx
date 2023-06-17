@@ -31,6 +31,9 @@ import {
   ModifyEndPage,
   ShopRatingPage,
   Page404,
+  PushAlarmSettingPage,
+  ShopDetailPage,
+  WorkerDetailPage,
 } from "./pages";
 
 export default function App() {
@@ -69,6 +72,9 @@ export default function App() {
       <Route path='/modifyend' element={<ModifyEndPage />} />
       <Route path='/shoprating' element={<ShopRatingPage />} />
       <Route path='/page404' element={<Page404 />} />
+      <Route path='/pushalarmsetting' element={<PushAlarmSettingPage />} />
+      <Route path='/shopdetail' element={<ShopDetailPage />} />
+      <Route path='/workerdetail' element={<WorkerDetailPage />} />
       <Route path='/*' element={<Navigate to='/page404' replace />} />
       
     </Routes>
