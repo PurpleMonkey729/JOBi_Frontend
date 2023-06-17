@@ -1,14 +1,14 @@
 .dashboard {
     display: flex;
     position: relative;
+    min-height: 100vh;
 }
 
 .dashboard-sidebar {
     background-color: #E1F0FB;
     position: absolute;
     width: 342px;
-    min-height: 100vh;
-    height: max-content;
+    min-height: 100%;
     padding-top: 62px;
     margin-left: 60px;
     padding-bottom: 62px;

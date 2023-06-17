@@ -2,12 +2,7 @@ import Sidebar from './Sidebar';
 import clsx from 'clsx';
 import Checkbox from '../../components/Checkbox';
 
-export default function BusinessInfoPage() {
-
-    const clickChange = index => {
-        // Please insert code.
-    }
-
+export default function WorkerDetailPage() {
     return (
         <div className='dashboard dbi'>
             <Sidebar active_num={1} />

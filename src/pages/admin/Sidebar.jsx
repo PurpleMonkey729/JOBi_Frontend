@@ -31,7 +31,7 @@ export default function AdminSidebar(props) {
                     <h1 className='hidden'>JOBi</h1>
                 </div>
                 <p className='mt-[20px] w-[225px] mx-auto text-[13px] font-bold'>ダッシュボード</p>
-                <nav className='mt-[40px] w-[225px] mx-auto'>
+                <nav className='pt-[40px] w-[225px] mx-auto'>
                     <div className={clsx('item', { active: props.active_num === 0 })}>店舗一覧</div>
                     <div onClick={goBuisness} className={clsx('item', { active: props.active_num === 1 })}>事業情報</div>
                     <div className={clsx('item', { active: props.active_num === 2 })}>利用明細</div>
